@@ -1,0 +1,38 @@
+viran:
+  app:
+    jwtSecret: bezKoderSecretKey
+    jwtExpirationMs: '86400000'
+
+server:
+  servlet:
+    context-path: /userservice
+  port: 8080
+
+logging:
+  level:
+    nodeValue: error
+    org:
+      springframework:
+        data: debug
+spring:
+  data:
+    mongodb:
+      database: app1
+      port: '27017'
+      host: ec2-3-91-154-243.compute-1.amazonaws.com
+
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+amazon:
+  endpointUrl: https://s3.us-east-2.amazonaws.com
+  accessKey: AKIASJKS3HYUETGHQPWB
+  secretKey: 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
+  bucketName: useraccountservice
+  region: us-east-1
+
+
